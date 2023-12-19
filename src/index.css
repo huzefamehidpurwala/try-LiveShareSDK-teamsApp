@@ -1,4 +1,8 @@
-* {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* * {
   box-sizing: border-box;
 }
 
@@ -15,4 +19,8 @@ body {
   body {
     width: fit-content;
   }
-}
+} */
+
+/* .center-flex-box {
+  display
+} */
