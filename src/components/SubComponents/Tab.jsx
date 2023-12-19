@@ -18,7 +18,7 @@ const Tab = () => {
           shape="circular"
           size="large"
           icon={<Add48Regular />}
-          onClick={(e) => setCounter((t) => ++t)}
+          onClick={(e) => setCounter((t) => ++t % 10)}
         />
       </div>
     </div>
