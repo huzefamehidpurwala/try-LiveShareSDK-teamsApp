@@ -46,12 +46,10 @@ provision:
       # run:
         # echo "::set-teamsfx-env TAB_DOMAIN=teamstoolkit.mehidpurwala.xyz";
         # echo "::set-teamsfx-env TAB_ENDPOINT=https://teamstoolkit.mehidpurwala.xyz";
-        # echo "::set-teamsfx-env FUNC_NAME=getUserProfile";
         # echo "::set-teamsfx-env FUNC_ENDPOINT=https://graphapi.mehidpurwala.xyz";
       run:
         echo "::set-teamsfx-env TAB_DOMAIN=localhost:53000";
         echo "::set-teamsfx-env TAB_ENDPOINT=https://localhost:53000";
-        echo "::set-teamsfx-env FUNC_NAME=getUserProfile";
         echo "::set-teamsfx-env FUNC_ENDPOINT=http://localhost:7071";
 
   # Apply the AAD manifest to an existing AAD app. Will use the object id in
@@ -152,7 +150,6 @@ deploy:
         SSL_KEY_FILE: ${{SSL_KEY_FILE}}
         REACT_APP_CLIENT_ID: ${{AAD_APP_CLIENT_ID}}
         REACT_APP_START_LOGIN_PAGE_URL: ${{TAB_ENDPOINT}}/auth-start.html
-        REACT_APP_FUNC_NAME: ${{FUNC_NAME}}
         REACT_APP_FUNC_ENDPOINT: ${{FUNC_ENDPOINT}}
 
   # Generate runtime environment variables for backend

@@ -21,6 +21,16 @@ body {
   }
 } */
 
-/* .center-flex-box {
-  display
-} */
+.grid-center-box {
+  display: grid;
+  place-content: center;
+  align-items: center;
+  justify-items: center;
+}
+
+.flex-center-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

@@ -48,7 +48,7 @@ export default function App() {
               : themeString === "dark"
               ? "dark"
               : "contrast"
-          } bg-teams-bg-3`}
+          } bg-teams-bg-3 h-screen`}
         >
           <Router>
             {loading ? (

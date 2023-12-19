@@ -43,6 +43,28 @@
       "scopes": ["personal"]
     }
   ],
+  "authorization": {
+    "permissions": {
+      "resourceSpecific": [
+        {
+          "name": "MeetingStage.Write.Chat",
+          "type": "Delegated"
+        },
+        {
+          "name": "ChannelMeetingStage.Write.Group",
+          "type": "Delegated"
+        },
+        {
+          "name": "LiveShareSession.ReadWrite.Chat",
+          "type": "Delegated"
+        },
+        {
+          "name": "LiveShareSession.ReadWrite.Group",
+          "type": "Delegated"
+        }
+      ]
+    }
+  },
   "permissions": ["identity", "messageTeamMembers"],
   "validDomains": ["${{TAB_DOMAIN}}", "*.mehidpurwala.xyz"],
   "isFullScreen": true,
