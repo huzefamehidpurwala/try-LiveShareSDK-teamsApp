@@ -9,10 +9,8 @@ const Tab = () => {
 
   return (
     <div
+      // className="h-screen grid place-content-center"
       className={mergeClasses("h-screen", styles.gridCenterBox)}
-      // className={
-      //   styles.gridCenterBox /* "h-screen grid place-content-center" */
-      // }
     >
       <div className={styles.flexCenterBox}>
         <Text size={900}>Value: {counter}</Text>
