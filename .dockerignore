@@ -1,0 +1,19 @@
+# Dependency directories
+# node_modules
+# package-lock.json
+
+.DS*Store
+/build
+/appPackage
+/.vscode
+/node_modules
+.*ignore
+./*manifest.json
+./*.yml
+./*.yaml
+package-lock.json
+/api/package-lock.json
+/api/node_modules
+/api/README.md
+README.md
+Dockerfile

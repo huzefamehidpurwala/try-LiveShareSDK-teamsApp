@@ -1,0 +1,34 @@
+# FROM mcr.microsoft.com/azure-functions/node:4-node18
+# FROM node:16.13.0-alpine3.14
+FROM ubuntu:20.04
+
+RUN apt-get update && apt-get install -y ca-certificates curl apt-transport-https lsb-release gnupg
+
+RUN curl -sL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | tee /etc/apt/trusted.gpg.d/microsoft.gpg
+RUN AZ_REPO=$(lsb_release -cs) && \
+    echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $AZ_REPO main" | tee /etc/apt/sources.list.d/azure-cli.list && \
+    echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-$AZ_REPO-prod $AZ_REPO main" | tee /etc/apt/sources.list.d/dotnetdev.list
+
+RUN apt-get update && apt-get install -y azure-cli azure-functions-core-tools-3
+
+RUN curl -fsSL https://deb.nodesource.com/setup_12.x | bash && apt-get install -y nodejs
+
+# ENV DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
+
+COPY . /teamsApp
+
+WORKDIR /teamsApp
+
+RUN npm install -g azure-functions-core-tools@3 --unsafe-perm true
+RUN npm install
+
+# ENV PATH="/usr/local/lib/node_modules/azure-functions-core-tools/bin/:${PATH}"
+
+WORKDIR /teamsApp/api
+
+RUN npm install
+
+EXPOSE 53000
+EXPOSE 7071
+
+CMD /teamsApp/start.sh

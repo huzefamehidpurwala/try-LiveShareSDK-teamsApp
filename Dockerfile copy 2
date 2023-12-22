@@ -1,0 +1,11 @@
+FROM node:16.13.0-alpine3.14
+
+COPY . /teamsApp
+
+WORKDIR /teamsApp
+
+RUN npm install
+
+EXPOSE 53000
+
+CMD [ "npm", "run", "dev:teamsfx" ]

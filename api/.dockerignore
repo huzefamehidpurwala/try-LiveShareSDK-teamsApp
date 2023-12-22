@@ -1,0 +1,19 @@
+# TypeScript output
+# dist
+# out
+
+# Dependency directories
+# node_modules
+# package-lock.json
+
+# Azure Functions artifacts
+# bin
+# obj
+# appsettings.json
+# local.settings.json
+
+# misc
+# .DS_Store
+
+# Local data
+# .localConfigs

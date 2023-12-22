@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  frontend:
+    image: huzefajamali/h-test-frontend-teamsapp:latest
+    container_name: azure_vote_front
+    ports:
+      - "443:53000"
+
+  backend:
+    image: huzefajamali/h-test-backend-teamsapp:latest
+    container_name: azure_vote_back
+    ports:
+      - "7071:7071"

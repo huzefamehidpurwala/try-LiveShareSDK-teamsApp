@@ -27,7 +27,7 @@
                     "portOccupancy" // Validate available ports to ensure those debug ones are not occupied.
                 ],
                 "portOccupancy": [
-                    53000, // tab service port
+                    443, // tab service port
                     7071, // backend service port
                     9229 // backend inspector port for Node.js debugger
                 ]
